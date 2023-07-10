@@ -513,7 +513,7 @@ body{
     display: block;
 }
 
-.modal-container{
+.backdrop{
     position: fixed;
     top: 0;
     left: 0;
@@ -527,7 +527,7 @@ body{
     pointer-events: none;
 }
 
-.modal-window{
+.modal{
     position: absolute;
     top: 50%;
     left: 50%;
