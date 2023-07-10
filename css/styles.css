@@ -75,6 +75,7 @@ body{
     letter-spacing: 0.02em;
     color: #2E2F42;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .nav-link.current::after {
     position: absolute;
@@ -89,12 +90,10 @@ body{
 }
 .nav-link:hover {
     color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-link:focus {
     color: #404BBF;    
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-contact{
@@ -102,16 +101,15 @@ body{
     line-height: 24px;
     letter-spacing: 0.02em; 
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-contact:focus{
     color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-contact:hover{
     color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .address{
@@ -148,14 +146,14 @@ body{
     border: none;
     border-radius: 4px;
     margin: 0 auto 0 auto;
-}
-.btn:focus{
-    background: #404BBF;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
-.btn:hover{
+.btn-hero:focus{
     background: #404BBF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.btn-hero:hover{
+    background: #404BBF;
+   
 }
 
 .logo{
@@ -241,14 +239,15 @@ body{
     align-items: center;
     justify-content: center;
     color:#8e8f99;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .customers-link:hover {
+    color: #404bbf;
     border-color: #404BBF;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .customers-link:focus {
+    color: #404bbf;
     border-color: #404BBF;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .customers-icon {
     fill: currentColor;
@@ -268,7 +267,8 @@ body{
     justify-content: center;
     gap: 24px;
 }
-.customers-container {
+
+.customers-section {
     padding: 120px 0
 }
 .footer{
@@ -291,6 +291,7 @@ body{
     padding: 12px 24px;
     border: 1px solid #e7e9fc;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .btn-portfolio:focus{
     color: #FFFFFF;
@@ -300,8 +301,7 @@ body{
 .btn-portfolio:hover{
     color: #FFFFFF;
     background: #404BBF;
-    border: 1px solid transparent;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    border: 1px solid transparent;   
 }
 .team-section{
     background-color: #F4F4FD;
@@ -425,11 +425,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link:hover {
     background-color: var(--ocean); 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
+.team-link:active {
+    background-color: var(--ocean);
+}
+
 .team-links {
     margin: 0 auto;
     display: flex;
@@ -475,11 +479,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .footer-social-link:hover {
     background-color: #31D0AA;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .portfolio-filters {
@@ -525,6 +529,10 @@ body{
 .is-hidden{
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
+}
+
+.empty {
 }
 
 .modal{
@@ -558,10 +566,12 @@ body{
 .modal-button:hover{
     background-color: #404bbf;
     border: none;
+    fill: #ffffff
 }
 .modal-button:focus {
     background-color: #404bbf;
     border: none;
+    fill: #ffffff
 }
 .modal-svg{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
