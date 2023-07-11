@@ -324,7 +324,9 @@ body{
     background: var(--white, #FFF);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-
+.team-icon{
+    fill: var(--cloud);
+}
 .card{
     display: flex;
     width: 232px;
@@ -332,7 +334,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding: 32px 16px;    
+    padding: 32px 0;    
+    margin: 0 auto;
 }
 
 .container {
@@ -438,11 +441,10 @@ body{
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-link:hover {
+
+.team-link:hover,
+.team-link:focus{
     background-color: var(--ocean); 
-}
-.team-link:focus {
-    background-color: var(--ocean);
 }
 
 .team-links {
@@ -493,11 +495,9 @@ body{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.footer-social-link:hover {
-    background-color: #31d0aa;
-}
-
-.footer-social-link:focus {
+.footer-social-link:hover,
+.footer-social-link:focus
+{
     background-color: #31d0aa;
 }
 
@@ -535,8 +535,12 @@ body{
 .portfolio-link{
     display: block;
     box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* для плавної появи тіні */
 }
-
+.portfolio-link:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .backdrop{
     position: fixed;
     top: 0;
